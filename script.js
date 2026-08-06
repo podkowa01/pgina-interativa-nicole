@@ -1,85 +1,57 @@
-function mostrar(opcao){
+const imagem = document.getElementById("imagem");
+const conteudo = document.getElementById("conteudo");
 
-let texto="";
+function mostrar(etapa){
 
-if(opcao=="chegada"){
+if(etapa === "chegada"){
 
-texto=`
+imagem.src = "https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=800";
+
+conteudo.innerHTML = `
+<img id="imagem" src="${imagem.src}">
 
 <h2>🐷 Chegada dos Leitões</h2>
 
 <p>
-
-Os leitões chegam ao pátio da granja.
-
-Essa é a fase mais delicada.
-
-Eles precisam de bastante cuidado,
-
-alimentação adequada e ambiente aquecido.
-
-Nos primeiros dias aprendem a comer
-
-e recebem acompanhamento.
-
+Os leitões chegam à granja com aproximadamente 21 dias de vida.
+Nessa fase eles recebem alimentação especial, água limpa e cuidados
+veterinários para garantir um bom desenvolvimento.
 </p>
-
 `;
-
 }
 
-if(opcao=="creche"){
+else if(etapa === "creche"){
 
-texto=`
+imagem.src = "https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?w=800";
+
+conteudo.innerHTML = `
+<img id="imagem" src="${imagem.src}">
 
 <h2>🏠 Saída para a Creche</h2>
 
 <p>
-
-Após aproximadamente 45 dias,
-
-os leitões seguem para a creche.
-
-Nessa fase a alimentação muda
-
-conforme eles crescem.
-
-Eles continuam se desenvolvendo
-
-até a fase de engorda.
-
+Após alguns dias, os leitões seguem para a creche.
+Lá continuam crescendo com alimentação balanceada,
+ambiente climatizado e acompanhamento diário.
 </p>
-
 `;
-
 }
 
-if(opcao=="abate"){
+else if(etapa === "abate"){
 
-texto=`
+imagem.src = "https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=800";
+
+conteudo.innerHTML = `
+<img id="imagem" src="${imagem.src}">
 
 <h2>🚛 Saída para o Abate</h2>
 
 <p>
-
-Quando atingem o peso ideal,
-
-os suínos são transportados
-
-para o frigorífico.
-
-Após o abate, a carne é preparada
-
-e enviada para mercados
-
-e açougues.
-
+Quando atingem o peso ideal, os suínos são transportados
+para o frigorífico. Após o processamento, a carne segue
+para supermercados, açougues e consumidores.
 </p>
-
 `;
-
 }
-
-document.getElementById("texto").innerHTML=texto;
 
 }
