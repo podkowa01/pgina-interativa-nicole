@@ -1,0 +1,95 @@
+function mostrar(etapa) {
+
+    const conteudo = document.getElementById("conteudo");
+
+    if (etapa === "leitoes") {
+
+        conteudo.innerHTML = `
+            <img id="foto" src="imagens/leitoes.jpg" alt="Leitões">
+
+            <h2>🐷 Chegada dos Leitões</h2>
+
+            <p>
+                Os leitões chegam à granja com aproximadamente 21 dias de idade.
+                Eles recebem ração adequada, água limpa e acompanhamento diário
+                para crescerem de forma saudável.
+            </p>
+        `;
+
+    } else if (etapa === "creche") {
+
+        conteudo.innerHTML = `
+            <img id="foto" src="imagens/creche.jpg" alt="Creche">
+
+            <h2>🏠 Saída para a Creche</h2>
+
+            <p>
+                Após o período inicial, os leitões vão para a creche.
+                Nessa fase eles continuam crescendo com alimentação balanceada
+                e recebem todos os cuidados necessários.
+            </p>
+        `;
+
+    } else if (etapa === "abate") {
+
+        conteudo.innerHTML = `
+            <img id="foto" src="imagens/abate.jpg" alt="Abate">
+function mostrar(etapa) {
+
+    const conteudo = document.getElementById("conteudo");
+
+    if (etapa === "leitoes") {
+
+        conteudo.innerHTML = `
+            <img id="foto" src="imagens/leitoes.jpg" alt="Leitões">
+
+            <h2>🐷 Chegada dos Leitões</h2>
+
+            <p>
+                Os leitões chegam à granja com aproximadamente 21 dias de idade.
+                Eles recebem ração adequada, água limpa e acompanhamento diário
+                para crescerem de forma saudável.
+            </p>
+        `;
+
+    } else if (etapa === "creche") {
+
+        conteudo.innerHTML = `
+            <img id="foto" src="imagens/creche.jpg" alt="Creche">
+
+            <h2>🏠 Saída para a Creche</h2>
+
+            <p>
+                Após o período inicial, os leitões vão para a creche.
+                Nessa fase eles continuam crescendo com alimentação balanceada
+                e recebem todos os cuidados necessários.
+            </p>
+        `;
+
+    } else if (etapa === "abate") {
+
+        conteudo.innerHTML = `
+            <img id="foto" src="imagens/abate.jpg" alt="Abate">
+
+            <h2>🚛 Saída para o Abate</h2>
+
+            <p>
+                Quando atingem o peso ideal, os suínos seguem para o frigorífico.
+                Após o processamento, a carne é distribuída para supermercados
+                e açougues.
+            </p>
+        `;
+    }
+
+}
+            <h2>🚛 Saída para o Abate</h2>
+
+            <p>
+                Quando atingem o peso ideal, os suínos seguem para o frigorífico.
+                Após o processamento, a carne é distribuída para supermercados
+                e açougues.
+            </p>
+        `;
+    }
+
+}

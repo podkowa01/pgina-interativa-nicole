@@ -1,55 +1,52 @@
-const imagem = document.getElementById("imagem");
-const conteudo = document.getElementById("conteudo");
-
 function mostrar(etapa){
 
-if(etapa === "chegada"){
+let foto = document.getElementById("foto");
+let conteudo = document.getElementById("conteudo");
 
-imagem.src = "https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=800";
+if(etapa == "leitoes"){
 
 conteudo.innerHTML = `
-<img id="imagem" src="${imagem.src}">
+<img id="foto" src="imagens/leitoes.jpg">
 
 <h2>🐷 Chegada dos Leitões</h2>
 
 <p>
-Os leitões chegam à granja com aproximadamente 21 dias de vida.
-Nessa fase eles recebem alimentação especial, água limpa e cuidados
-veterinários para garantir um bom desenvolvimento.
+Os leitões chegam à granja com cerca de 21 dias de idade.
+Nessa fase eles recebem ração apropriada, água limpa,
+vacinação quando necessária e acompanhamento diário para
+garantir um crescimento saudável.
 </p>
 `;
 }
 
-else if(etapa === "creche"){
-
-imagem.src = "https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?w=800";
+if(etapa == "creche"){
 
 conteudo.innerHTML = `
-<img id="imagem" src="${imagem.src}">
+<img id="foto" src="imagens/creche.jpg">
 
 <h2>🏠 Saída para a Creche</h2>
 
 <p>
-Após alguns dias, os leitões seguem para a creche.
-Lá continuam crescendo com alimentação balanceada,
-ambiente climatizado e acompanhamento diário.
+Depois do período inicial, os leitões vão para a creche.
+Eles continuam recebendo alimentação balanceada,
+ambiente limpo e cuidados para crescerem fortes
+até a fase de engorda.
 </p>
 `;
 }
 
-else if(etapa === "abate"){
-
-imagem.src = "https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=800";
+if(etapa == "abate"){
 
 conteudo.innerHTML = `
-<img id="imagem" src="${imagem.src}">
+<img id="foto" src="imagens/abate.jpg">
 
 <h2>🚛 Saída para o Abate</h2>
 
 <p>
 Quando atingem o peso ideal, os suínos são transportados
-para o frigorífico. Após o processamento, a carne segue
-para supermercados, açougues e consumidores.
+para o frigorífico, onde passam pelo processo de abate
+seguindo as normas de higiene e bem-estar animal.
+Depois, a carne é distribuída para supermercados e açougues.
 </p>
 `;
 }
