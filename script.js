@@ -1,85 +1,65 @@
-unction mostrar(opcao){
+function entrar() {
 
-let texto="";
+    const login = document.getElementById("login").value;
+    const senha = document.getElementById("senha").value;
 
-if(opcao=="chegada"){
+    if (login === "" || senha === "") {
+        alert("Digite o login e a senha.");
+        return;
+    }
 
-texto=`
-
-<h2>🐷 Chegada dos Leitões</h2>
-
-<p>
-
-Os leitões chegam ao pátio da granja.
-
-Essa é a fase mais delicada.
-
-Eles precisam de bastante cuidado,
-
-alimentação adequada e ambiente aquecido.
-
-Nos primeiros dias aprendem a comer
-
-e recebem acompanhamento.
-
-</p>
-
-`;
-
+    alert("Login realizado com sucesso!");
 }
 
-if(opcao=="creche"){
 
-texto=`
+function mostrar(tipo) {
 
-<h2>🏠 Saída para a Creche</h2>
+    const texto = document.getElementById("texto");
 
-<p>
+    if (tipo === "chegada") {
 
-Após aproximadamente 45 dias,
+        texto.innerHTML = `
+            <h2>🐷 Chegada dos Leitões</h2>
 
-os leitões seguem para a creche.
+            <p>
+                Registre a chegada dos leitões na Granja Podkowa.
+            </p>
 
-Nessa fase a alimentação muda
+            <p>
+                Quantidade, data de chegada, origem e lote
+                poderão ser cadastrados aqui.
+            </p>
+        `;
 
-conforme eles crescem.
+    } else if (tipo === "creche") {
 
-Eles continuam se desenvolvendo
+        texto.innerHTML = `
+            <h2>🏠 Saída para a Creche</h2>
 
-até a fase de engorda.
+            <p>
+                Registre a saída dos leitões para a creche.
+            </p>
 
-</p>
+            <p>
+                Informe o lote, quantidade de animais,
+                data de saída e destino.
+            </p>
+        `;
 
-`;
+    } else if (tipo === "abate") {
 
-}
+        texto.innerHTML = `
+            <h2>🚛 Saída para o Abate</h2>
 
-if(opcao=="abate"){
+            <p>
+                Registre os animais enviados para o abate.
+            </p>
 
-texto=`
+            <p>
+                Informe o lote, quantidade, data de saída
+                e destino dos animais.
+            </p>
+        `;
 
-<h2>🚛 Saída para o Abate</h2>
-
-<p>
-
-Quando atingem o peso ideal,
-
-os suínos são transportados
-
-para o frigorífico.
-
-Após o abate, a carne é preparada
-
-e enviada para mercados
-
-e açougues.
-
-</p>
-
-`;
-
-}
-
-document.getElementById("texto").innerHTML=texto;
-
+    }
 }
