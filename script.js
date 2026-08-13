@@ -1,54 +1,85 @@
-function mostrar(etapa){
+unction mostrar(opcao){
 
-let foto = document.getElementById("foto");
-let conteudo = document.getElementById("conteudo");
+let texto="";
 
-if(etapa == "leitoes"){
+if(opcao=="chegada"){
 
-conteudo.innerHTML = `
-<img id="foto" src="imagens/leitoes.jpg">
+texto=`
 
 <h2>🐷 Chegada dos Leitões</h2>
 
 <p>
-Os leitões chegam à granja com cerca de 21 dias de idade.
-Nessa fase eles recebem ração apropriada, água limpa,
-vacinação quando necessária e acompanhamento diário para
-garantir um crescimento saudável.
+
+Os leitões chegam ao pátio da granja.
+
+Essa é a fase mais delicada.
+
+Eles precisam de bastante cuidado,
+
+alimentação adequada e ambiente aquecido.
+
+Nos primeiros dias aprendem a comer
+
+e recebem acompanhamento.
+
 </p>
+
 `;
+
 }
 
-if(etapa == "creche"){
+if(opcao=="creche"){
 
-conteudo.innerHTML = `
-<img id="foto" src="imagens/creche.jpg">
+texto=`
 
 <h2>🏠 Saída para a Creche</h2>
 
 <p>
-Depois do período inicial, os leitões vão para a creche.
-Eles continuam recebendo alimentação balanceada,
-ambiente limpo e cuidados para crescerem fortes
+
+Após aproximadamente 45 dias,
+
+os leitões seguem para a creche.
+
+Nessa fase a alimentação muda
+
+conforme eles crescem.
+
+Eles continuam se desenvolvendo
+
 até a fase de engorda.
+
 </p>
+
 `;
+
 }
 
-if(etapa == "abate"){
+if(opcao=="abate"){
 
-conteudo.innerHTML = `
-<img id="foto" src="imagens/abate.jpg">
+texto=`
 
 <h2>🚛 Saída para o Abate</h2>
 
 <p>
-Quando atingem o peso ideal, os suínos são transportados
-para o frigorífico, onde passam pelo processo de abate
-seguindo as normas de higiene e bem-estar animal.
-Depois, a carne é distribuída para supermercados e açougues.
+
+Quando atingem o peso ideal,
+
+os suínos são transportados
+
+para o frigorífico.
+
+Após o abate, a carne é preparada
+
+e enviada para mercados
+
+e açougues.
+
 </p>
+
 `;
+
 }
+
+document.getElementById("texto").innerHTML=texto;
 
 }
