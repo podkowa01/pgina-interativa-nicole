@@ -1,85 +1,127 @@
-unction mostrar(opcao){
-
-let texto="";
-
-if(opcao=="chegada"){
-
-texto=`
-
-<h2>🐷 Chegada dos Leitões</h2>
-
-<p>
-
-Os leitões chegam ao pátio da granja.
-
-Essa é a fase mais delicada.
-
-Eles precisam de bastante cuidado,
-
-alimentação adequada e ambiente aquecido.
-
-Nos primeiros dias aprendem a comer
-
-e recebem acompanhamento.
-
-</p>
-
-`;
-
+{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
 }
 
-if(opcao=="creche"){
-
-texto=`
-
-<h2>🏠 Saída para a Creche</h2>
-
-<p>
-
-Após aproximadamente 45 dias,
-
-os leitões seguem para a creche.
-
-Nessa fase a alimentação muda
-
-conforme eles crescem.
-
-Eles continuam se desenvolvendo
-
-até a fase de engorda.
-
-</p>
-
-`;
-
+body{
+background:#e8f5e9;
 }
 
-if(opcao=="abate"){
-
-texto=`
-
-<h2>🚛 Saída para o Abate</h2>
-
-<p>
-
-Quando atingem o peso ideal,
-
-os suínos são transportados
-
-para o frigorífico.
-
-Após o abate, a carne é preparada
-
-e enviada para mercados
-
-e açougues.
-
-</p>
-
-`;
-
+header{
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:25px;
 }
 
-document.getElementById("texto").innerHTML=texto;
+header h1{
+font-size:40px;
+}
 
+header p{
+margin-top:8px;
+font-size:18px;
+}
+
+.login{
+width:350px;
+background:white;
+margin:30px auto;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+text-align:center;
+}
+
+.login h2{
+margin-bottom:20px;
+color:#2e7d32;
+}
+
+.login input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:16px;
+}
+
+.entrar{
+width:100%;
+padding:12px;
+border:none;
+border-radius:8px;
+background:#43a047;
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+}
+
+.entrar:hover{
+background:#1b5e20;
+}
+
+.menu{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+margin:30px;
+}
+
+.menu button{
+background:#4caf50;
+color:white;
+border:none;
+padding:15px 25px;
+border-radius:10px;
+cursor:pointer;
+font-size:17px;
+transition:.3s;
+}
+
+.menu button:hover{
+transform:scale(1.05);
+background:#2e7d32;
+}
+
+#conteudo{
+width:90%;
+max-width:900px;
+margin:auto;
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+text-align:center;
+margin-bottom:40px;
+}
+
+#imagem{
+width:100%;
+max-height:350px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:20px;
+}
+
+#conteudo h2{
+color:#2e7d32;
+margin-bottom:15px;
+}
+
+#conteudo p{
+font-size:18px;
+line-height:1.7;
+}
+
+footer{
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:20px;
 }

@@ -1,85 +1,57 @@
-body{
+const imagem = document.getElementById("imagem");
+const conteudo = document.getElementById("conteudo");
 
-font-family:Arial;
+function mostrar(etapa){
 
-background:#eef8ee;
+if(etapa === "chegada"){
 
-margin:0;
+imagem.src = "https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=800";
 
-text-align:center;
+conteudo.innerHTML = `
+<img id="imagem" src="${imagem.src}">
 
+<h2>🐷 Chegada dos Leitões</h2>
+
+<p>
+Os leitões chegam à granja com aproximadamente 21 dias de vida.
+Nessa fase eles recebem alimentação especial, água limpa e cuidados
+veterinários para garantir um bom desenvolvimento.
+</p>
+`;
 }
 
-header{
+else if(etapa === "creche"){
 
-background:#2e7d32;
+imagem.src = "https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?w=800";
 
-color:white;
+conteudo.innerHTML = `
+<img id="imagem" src="${imagem.src}">
 
-padding:20px;
+<h2>🏠 Saída para a Creche</h2>
 
+<p>
+Após alguns dias, os leitões seguem para a creche.
+Lá continuam crescendo com alimentação balanceada,
+ambiente climatizado e acompanhamento diário.
+</p>
+`;
 }
 
-.login{
+else if(etapa === "abate"){
 
-margin:20px;
+imagem.src = "https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=800";
 
+conteudo.innerHTML = `
+<img id="imagem" src="${imagem.src}">
+
+<h2>🚛 Saída para o Abate</h2>
+
+<p>
+Quando atingem o peso ideal, os suínos são transportados
+para o frigorífico. Após o processamento, a carne segue
+para supermercados, açougues e consumidores.
+</p>
+`;
 }
-
-input{
-
-padding:10px;
-
-margin:5px;
-
-}
-
-button{
-
-padding:15px 25px;
-
-margin:10px;
-
-font-size:18px;
-
-border:none;
-
-border-radius:10px;
-
-background:#43a047;
-
-color:white;
-
-cursor:pointer;
-
-transition:0.3s;
-
-}
-
-button:hover{
-
-background:#1b5e20;
-
-}
-
-#texto{
-
-width:80%;
-
-margin:auto;
-
-margin-top:30px;
-
-background:white;
-
-padding:25px;
-
-border-radius:12px;
-
-box-shadow:0 0 15px rgba(0,0,0,.2);
-
-font-size:18px;
-
-text-align:left;
 
 }
