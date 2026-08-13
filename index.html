@@ -4,67 +4,32 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Granja Podkowa</title>
-
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
-
-<h1>🐷 Granja Podkowa</h1>
-
-<p>Do nascimento até o abate</p>
-
+<img src="imagens/logo.png" class="logo">
+<h1>Granja Podkowa</h1>
+<p>Sistema de Produção de Suínos</p>
 </header>
 
-<div class="login">
-
-<h2>Login</h2>
-
-<input type="text" placeholder="Usuário">
-
-<input type="password" placeholder="Senha">
-
-<button class="entrar">Entrar</button>
-
+<div class="menu">
+<button onclick="mostrar('leitoes')">🐷 Chegada dos Leitões</button>
+<button onclick="mostrar('creche')">🏠 Saída para Creche</button>
+<button onclick="mostrar('abate')">🚛 Saída para Abate</button>
 </div>
 
-<section class="menu">
+<div id="conteudo">
 
-<button onclick="mostrar('chegada')">
-🐷 Chegada dos Leitões
-</button>
-
-<button onclick="mostrar('creche')">
-🏠 Saída para a Creche
-</button>
-
-<button onclick="mostrar('abate')">
-🚛 Saída para o Abate
-</button>
-
-</section>
-
-<section id="conteudo">
-
-<img id="imagem"
-src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=800"
-alt="Granja">
+<img id="foto" src="imagens/leitoes.jpg">
 
 <h2>Bem-vindo!</h2>
 
-<p>
-Clique em um dos botões acima para visualizar
-as informações de cada etapa.
-</p>
+<p>Clique em um botão para visualizar as informações.</p>
 
-</section>
-
-<footer>
-
-© 2026 Granja Podkowa
-
-</footer>
+</div>
 
 <script src="script.js"></script>
 
