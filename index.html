@@ -4,23 +4,32 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Granja Podkowa</title>
+
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
+
 <h1>🐷 Granja Podkowa</h1>
+
 <p>Do nascimento até o abate</p>
+
 </header>
 
 <div class="login">
-<input type="text" placeholder="Login">
+
+<h2>Login</h2>
+
+<input type="text" placeholder="Usuário">
+
 <input type="password" placeholder="Senha">
-<button>Entrar</button>
+
+<button class="entrar">Entrar</button>
+
 </div>
 
-<div class="botoes">
+<section class="menu">
 
 <button onclick="mostrar('chegada')">
 🐷 Chegada dos Leitões
@@ -34,15 +43,28 @@
 🚛 Saída para o Abate
 </button>
 
-</div>
+</section>
 
-<div id="texto">
+<section id="conteudo">
+
+<img id="imagem"
+src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=800"
+alt="Granja">
 
 <h2>Bem-vindo!</h2>
 
-<p>Clique em um dos botões acima para ver as informações.</p>
+<p>
+Clique em um dos botões acima para visualizar
+as informações de cada etapa.
+</p>
 
-</div>
+</section>
+
+<footer>
+
+© 2026 Granja Podkowa
+
+</footer>
 
 <script src="script.js"></script>
 
