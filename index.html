@@ -1,49 +1,50 @@
-function mostrar(etapa) {
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Granja Podkowa</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
-const conteudo = document.getElementById("conteudo");
+<body>
 
-if (etapa === "leitoes") {
+<header>
+<h1>🐷 Granja Podkowa</h1>
+<p>Do nascimento até o abate</p>
+</header>
 
-conteudo.innerHTML = `
-<img id="foto" src="imagens/leitoes.jpg" alt="Leitões">
+<div class="login">
+<input type="text" placeholder="Login">
+<input type="password" placeholder="Senha">
+<button>Entrar</button>
+</div>
 
-<h2>🐷 Chegada dos Leitões</h2>
+<div class="botoes">
 
-<p>
-Os leitões chegam à granja com aproximadamente 21 dias de idade.
-Eles recebem ração adequada, água limpa e acompanhamento diário
-para crescerem de forma saudável.
-</p>
-`;
-}
+<button onclick="mostrar('chegada')">
+🐷 Chegada dos Leitões
+</button>
 
-else if (etapa === "creche") {
+<button onclick="mostrar('creche')">
+🏠 Saída para a Creche
+</button>
 
-conteudo.innerHTML = `
-<img id="foto" src="imagens/creche.jpg" alt="Creche">
+<button onclick="mostrar('abate')">
+🚛 Saída para o Abate
+</button>
 
-<h2>🏠 Saída para a Creche</h2>
+</div>
 
-<p>
-Após o período inicial, os leitões vão para a creche.
-Nessa fase eles continuam crescendo com alimentação balanceada
-e recebem todos os cuidados necessários.
-</p>
-`;
-}
+<div id="texto">
 
-else if (etapa === "abate") {
+<h2>Bem-vindo!</h2>
 
-conteudo.innerHTML = `
-<img id="foto" src="imagens/abate.jpg" alt="Abate">
+<p>Clique em um dos botões acima para ver as informações.</p>
 
-<h2>🚛 Saída para o Abate</h2>
+</div>
 
-<p>
-Quando atingem o peso ideal, os suínos seguem para o frigorífico.
-Após o processamento, a carne é distribuída para supermercados
-e açougues.
-</p>
-`;
-}
-}
+<script src="script.js"></script>
+
+</body>
+</html>
