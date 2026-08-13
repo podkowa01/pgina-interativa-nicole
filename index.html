@@ -1,50 +1,57 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Granja Podkowa</title>
-<link rel="stylesheet" href="style.css">
-</head>
+const imagem = document.getElementById("imagem");
+const conteudo = document.getElementById("conteudo");
 
-<body>
+function mostrar(etapa){
 
-<header>
-<h1>🐷 Granja Podkowa</h1>
-<p>Do nascimento até o abate</p>
-</header>
+if(etapa === "chegada"){
 
-<div class="login">
-<input type="text" placeholder="Login">
-<input type="password" placeholder="Senha">
-<button>Entrar</button>
-</div>
+imagem.src = "https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=800";
 
-<div class="botoes">
+conteudo.innerHTML = `
+<img id="imagem" src="${imagem.src}">
 
-<button onclick="mostrar('chegada')">
-🐷 Chegada dos Leitões
-</button>
+<h2>🐷 Chegada dos Leitões</h2>
 
-<button onclick="mostrar('creche')">
-🏠 Saída para a Creche
-</button>
+<p>
+Os leitões chegam à granja com aproximadamente 21 dias de vida.
+Nessa fase eles recebem alimentação especial, água limpa e cuidados
+veterinários para garantir um bom desenvolvimento.
+</p>
+`;
+}
 
-<button onclick="mostrar('abate')">
-🚛 Saída para o Abate
-</button>
+else if(etapa === "creche"){
 
-</div>
+imagem.src = "https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?w=800";
 
-<div id="texto">
+conteudo.innerHTML = `
+<img id="imagem" src="${imagem.src}">
 
-<h2>Bem-vindo!</h2>
+<h2>🏠 Saída para a Creche</h2>
 
-<p>Clique em um dos botões acima para ver as informações.</p>
+<p>
+Após alguns dias, os leitões seguem para a creche.
+Lá continuam crescendo com alimentação balanceada,
+ambiente climatizado e acompanhamento diário.
+</p>
+`;
+}
 
-</div>
+else if(etapa === "abate"){
 
-<script src="script.js"></script>
+imagem.src = "https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=800";
 
-</body>
-</html>
+conteudo.innerHTML = `
+<img id="imagem" src="${imagem.src}">
+
+<h2>🚛 Saída para o Abate</h2>
+
+<p>
+Quando atingem o peso ideal, os suínos são transportados
+para o frigorífico. Após o processamento, a carne segue
+para supermercados, açougues e consumidores.
+</p>
+`;
+}
+
+}
