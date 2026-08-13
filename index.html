@@ -1,57 +1,255 @@
-const imagem = document.getElementById("imagem");
-const conteudo = document.getElementById("conteudo");
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-function mostrar(etapa){
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-if(etapa === "chegada"){
+    <title>Granja Podkowa</title>
 
-imagem.src = "https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=800";
+    <link rel="stylesheet" href="style.css">
 
-conteudo.innerHTML = `
-<img id="imagem" src="${imagem.src}">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
 
-<h2>🐷 Chegada dos Leitões</h2>
+        header {
+            background-color: #f4a261;
+            color: white;
+            padding: 25px;
+        }
 
-<p>
-Os leitões chegam à granja com aproximadamente 21 dias de vida.
-Nessa fase eles recebem alimentação especial, água limpa e cuidados
-veterinários para garantir um bom desenvolvimento.
-</p>
-`;
-}
+        .imagem-porco {
+            width: 180px;
+            height: 180px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto 10px;
+        }
 
-else if(etapa === "creche"){
+        header h1 {
+            margin: 10px 0 5px;
+            font-size: 32px;
+        }
 
-imagem.src = "https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?w=800";
+        header p {
+            margin: 0;
+            font-size: 18px;
+        }
 
-conteudo.innerHTML = `
-<img id="imagem" src="${imagem.src}">
+        .login {
+            margin: 25px auto;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
 
-<h2>🏠 Saída para a Creche</h2>
+        .login input {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
 
-<p>
-Após alguns dias, os leitões seguem para a creche.
-Lá continuam crescendo com alimentação balanceada,
-ambiente climatizado e acompanhamento diário.
-</p>
-`;
-}
+        .login button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: #2a9d8f;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
 
-else if(etapa === "abate"){
+        .login button:hover {
+            background-color: #21867a;
+        }
 
-imagem.src = "https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=800";
+        .botoes {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 30px auto;
+        }
 
-conteudo.innerHTML = `
-<img id="imagem" src="${imagem.src}">
+        .botoes button {
+            padding: 15px 20px;
+            border: none;
+            border-radius: 10px;
+            background-color: #264653;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
 
-<h2>🚛 Saída para o Abate</h2>
+        .botoes button:hover {
+            background-color: #e76f51;
+            transform: scale(1.05);
+        }
 
-<p>
-Quando atingem o peso ideal, os suínos são transportados
-para o frigorífico. Após o processamento, a carne segue
-para supermercados, açougues e consumidores.
-</p>
-`;
-}
+        #texto {
+            background-color: white;
+            width: 80%;
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
 
-}
+        #texto h2 {
+            color: #264653;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <!-- IMAGEM DO PORCO -->
+        <img src="porco.png" alt="Porco da Granja Podkowa" class="imagem-porco">
+
+        <h1>🐷 Granja Podkowa</h1>
+
+        <p>Do nascimento até o abate</p>
+
+    </header>
+
+
+    <!-- LOGIN -->
+
+    <div class="login">
+
+        <input
+            type="text"
+            placeholder="Login"
+        >
+
+        <input
+            type="password"
+            placeholder="Senha"
+        >
+
+        <button onclick="entrar()">
+            Entrar
+        </button>
+
+    </div>
+
+
+    <!-- BOTÕES -->
+
+    <div class="botoes">
+
+        <button onclick="mostrar('chegada')">
+            🐷 Chegada dos Leitões
+        </button>
+
+        <button onclick="mostrar('creche')">
+            🏠 Saída para a Creche
+        </button>
+
+        <button onclick="mostrar('abate')">
+            🚛 Saída para o Abate
+        </button>
+
+    </div>
+
+
+    <!-- ÁREA DE INFORMAÇÕES -->
+
+    <div id="texto">
+
+        <h2>Bem-vindo!</h2>
+
+        <p>
+            Clique em um dos botões acima para ver as informações.
+        </p>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function entrar() {
+
+            alert("Login realizado com sucesso!");
+
+        }
+
+
+        function mostrar(tipo) {
+
+            const texto = document.getElementById("texto");
+
+
+            if (tipo === "chegada") {
+
+                texto.innerHTML = `
+                    <h2>🐷 Chegada dos Leitões</h2>
+
+                    <p>
+                        Registre a chegada dos leitões na Granja Podkowa.
+                    </p>
+
+                    <p>
+                        Aqui poderão ser cadastradas informações como
+                        quantidade, data de chegada, origem e lote.
+                    </p>
+                `;
+
+            }
+
+
+            else if (tipo === "creche") {
+
+                texto.innerHTML = `
+                    <h2>🏠 Saída para a Creche</h2>
+
+                    <p>
+                        Registre a saída dos leitões para a creche.
+                    </p>
+
+                    <p>
+                        Informe o lote, quantidade de animais,
+                        data de saída e destino.
+                    </p>
+                `;
+
+            }
+
+
+            else if (tipo === "abate") {
+
+                texto.innerHTML = `
+                    <h2>🚛 Saída para o Abate</h2>
+
+                    <p>
+                        Registre os animais enviados para o abate.
+                    </p>
+
+                    <p>
+                        Informe o lote, quantidade, data de saída
+                        e destino dos animais.
+                    </p>
+                `;
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
