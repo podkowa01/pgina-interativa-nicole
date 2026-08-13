@@ -1,85 +1,85 @@
-body{
+unction mostrar(opcao){
 
-font-family:Arial;
+let texto="";
 
-background:#eef8ee;
+if(opcao=="chegada"){
 
-margin:0;
+texto=`
 
-text-align:center;
+<h2>🐷 Chegada dos Leitões</h2>
 
-}
+<p>
 
-header{
+Os leitões chegam ao pátio da granja.
 
-background:#2e7d32;
+Essa é a fase mais delicada.
 
-color:white;
+Eles precisam de bastante cuidado,
 
-padding:20px;
+alimentação adequada e ambiente aquecido.
 
-}
+Nos primeiros dias aprendem a comer
 
-.login{
+e recebem acompanhamento.
 
-margin:20px;
+</p>
 
-}
-
-input{
-
-padding:10px;
-
-margin:5px;
+`;
 
 }
 
-button{
+if(opcao=="creche"){
 
-padding:15px 25px;
+texto=`
 
-margin:10px;
+<h2>🏠 Saída para a Creche</h2>
 
-font-size:18px;
+<p>
 
-border:none;
+Após aproximadamente 45 dias,
 
-border-radius:10px;
+os leitões seguem para a creche.
 
-background:#43a047;
+Nessa fase a alimentação muda
 
-color:white;
+conforme eles crescem.
 
-cursor:pointer;
+Eles continuam se desenvolvendo
 
-transition:0.3s;
+até a fase de engorda.
 
-}
+</p>
 
-button:hover{
-
-background:#1b5e20;
+`;
 
 }
 
-#texto{
+if(opcao=="abate"){
 
-width:80%;
+texto=`
 
-margin:auto;
+<h2>🚛 Saída para o Abate</h2>
 
-margin-top:30px;
+<p>
 
-background:white;
+Quando atingem o peso ideal,
 
-padding:25px;
+os suínos são transportados
 
-border-radius:12px;
+para o frigorífico.
 
-box-shadow:0 0 15px rgba(0,0,0,.2);
+Após o abate, a carne é preparada
 
-font-size:18px;
+e enviada para mercados
 
-text-align:left;
+e açougues.
+
+</p>
+
+`;
+
+}
+
+document.getElementById("texto").innerHTML=texto;
 
 }
